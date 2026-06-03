@@ -216,3 +216,29 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- GenAI_5 / T2S project ---
+.DS_Store
+**/.DS_Store
+
+# Your venv name (readme: my_t2s) — does NOT match "venv/"
+my_t2s/
+
+# Extra env variants (optional but common)
+.env.local
+.env.*.local
+*.env
+
+# Local DB / vector index (when you add RAG later)
+*.db
+chroma_db/
+.chroma/
+T2S/data/
+
+# IDE / editor (optional)
+.idea/
+.vscode/
+*.swp
+
+# Cursor local state (optional)
+.cursor/
