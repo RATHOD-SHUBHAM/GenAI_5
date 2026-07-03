@@ -1,0 +1,18 @@
+[project]
+name = "t2s-api"
+version = "0.1.0"
+description = "Text-to-SQL FastAPI backend"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "python-dotenv",
+    "redis",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "openai",
+    "pinecone",
+]
+
+[tool.uv]
+package = false

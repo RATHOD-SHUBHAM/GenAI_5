@@ -2,3 +2,7 @@ python-dotenv
 psycopg2-binary
 SQLAlchemy
 openai
+pinecone
+langchain 
+langchain-pinecone 
+langchain-openai

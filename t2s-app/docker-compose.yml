@@ -1,0 +1,20 @@
+# Orchestrates api + frontend containers.
+# No local Redis — api uses Redis Cloud via REDIS_URL in ../.env
+
+services:
+  api:
+    build: ./backend
+    env_file:
+      - ../.env          # injects GenAI_5/.env at runtime (never baked into image)
+    ports:
+      - "8000:8000"      # host:container — API reachable at localhost:8000
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api              # start api before frontend (does not wait for api to be healthy)

@@ -132,7 +132,7 @@ def generate_prompt_with_cot(schema, query):
         3. We'll use the YEAR function to extract the year from the hire_date.
         4. We'll calculate the average of the salary column for the filtered rows.
         </thinking>
-        <sql>SELECT AVG(salary) FROM employees WHERE YEAR(hire_date) = 2022;</sql>
+        <sql>SELECT AVG(salary) FROM employees WHERE YEAR(YEAR FROM hire_date) = 2022;</sql>
         </example>
         """
 
